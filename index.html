@@ -167,6 +167,7 @@
     </section>
   
   <!-- Experience -->
+
   <section class="page-section" id="services">
     <div class="container">
       <div class="row">
@@ -176,46 +177,74 @@
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Research intern</h4>
-          <p class="text-muted">Building a comprehensive database of solar energy production from
-            satellite imagery. This will be integrated with energy sources like wind
-            to create a unified database of global energy production.
-            Explore semi-supervised learning methods to handle large unlabeled
-            datasets with minimal hand labelling
-            <a href="https://drive.google.com/file/d/1g_DnOEkOb5TgNmAKi0exazmGibqzqnyf/view?usp=sharing">presentation</a>
-          </p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
+        <button class="service-button col-md-4" onclick="openTab('aicc');" style="background:rgb(247, 241, 194);">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Stanford research intern</h4>
+            <h6 class="service-heading"> <strong>Andrew Ng</strong>'s AI for Climate Change bootcamp
+            <br> July-Dec, 2019 </h6>
+          </button>
+        
+        <button class="service-button col-md-4 " onclick="openTab('nal');" style="background:rgb(247, 239, 178);">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Engineering intern</h4>
+            <h6> National Aerospace Laboratories
+              <br>May-June, 2016
+            </h6>
+          </button>
+
+          <button class="service-button col-md-4" onclick="openTab('baycurrent');" style="background-color:rgb(248, 237, 153);">
+            <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Consulting intern</h4>
-          <p class="text-muted">Performed market entry research of health care industry on a
-            South-East Asian country and assisted in long term strategy
-            development of artificial intelligence sector
-            Received an international pre-placement offer for junior analyst
-            position</p>
+          <h6>BayCurrent consulting
+            <br> May-June, 2017
+          </h6>
+          </button>
         </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Engineering intern</h4>
-          <p class="text-muted">Modeled Particle Image Velocimetry (PIV) and Background Oriented
-            Schlieren (BOS) techniques
-            Performed analysis on missile store separation drop tests for military
-            aircrafts</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+
+
+  <div id="aicc" class="containerTab" style="display:none; background:rgb(247, 241, 194)">
+    <!-- If you want the ability to close the container, add a close button -->
+    <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span> -->
+    <p>
+      Built a comprehensive database of solar energy production from
+      satellite imagery. This will be integrated with energy sources like wind
+      to create a unified database of global energy production. <br>
+      Explored semi-supervised learning methods to handle large unlabeled
+      datasets with minimal hand labeling. Achieved 250% higher accuracy compared to purely supervised methods by utilizing unlabeled 
+      data on benchmark datasets.
+      <a href="https://drive.google.com/file/d/1g_DnOEkOb5TgNmAKi0exazmGibqzqnyf/view?usp=sharing">presentation</a>
+    </p>
+  </div>
+  <div id="baycurrent" class="containerTab" style="display:none; background:rgb(248, 237, 153)">
+    <p >
+      Received an international pre-placement offer for junior analyst position
+      <br>
+      Performed market entry research of health care industry on a South-East Asian country for a Japan based MNC.
+      <br>
+      Assisted in long term strategy development and performed competitive analysis for artificial intelligence division
+      <br>
+    </p>
+  </div>
+  <div id="nal" class="containerTab" style="display:none; background:rgb(247, 239, 178)">
+    <p>
+      Modeled Particle Image Velocimetry (PIV) and Background Oriented Schlieren (BOS) techniques in Matlab
+      <br> Performed analysis on missile store separation drop tests for military aircrafts
+      <br> Analyzed the airfield around weapon bay cavities and studied the impact of a new design surface</p>
+  </div>
+
+</div>
+</section>
 
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
@@ -227,6 +256,7 @@
         </div>
       </div>
       <div class="row">
+
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
             <div class="portfolio-hover">
@@ -241,34 +271,37 @@
             <p class="text-muted">Machine learning</p>
           </div>
         </div>
+
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+          <a class="portfolio-link" data-toggle="modal" href="#gan">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/jump.PNG" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Videos from image</h4>
-            <p class="text-muted">GANs</p>
+            <h4>Animated videos from image</h4>
+            <p class="text-muted">Generative models, Machine learning</p>
           </div>
         </div>
+
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+          <a class="portfolio-link" data-toggle="modal" href="#fooddelivery">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/turtlebot.png" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Autonomous food delivery</h4>
-            <p class="text-muted">Robotics</p>
+            <h4>Autonomous delivery bot</h4>
+            <p class="text-muted">Robotic software development</p>
           </div>
         </div>
+
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
             <div class="portfolio-hover">
@@ -283,6 +316,7 @@
             <p class="text-muted">Networking</p>
           </div>
         </div>
+
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
             <div class="portfolio-hover">
@@ -297,6 +331,7 @@
             <p class="text-muted">Machine learning</p>
           </div>
         </div>
+        
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
             <div class="portfolio-hover">
@@ -312,6 +347,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -525,7 +561,7 @@
   <!-- Portfolio Modals -->
 
   <!-- Modal 1 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="gan" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -538,15 +574,72 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+
+                <h2 class="text-uppercase">Video generation from single image</h2>
+                <p class="item-intro text-muted">Generative models, Machine learning</p>
+
+                <div class="row" style="text-align: center;">
+                  <div class="col-md-4"  style="padding: 0px;">
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/input.jpg" alt="" style="height: 200px; width:300px;margin-bottom: 0px;">
+                    <figcaption> Input image</figcaption>
+                  </div>
+                  <div class="col-md-4" style="padding: 0px;">
+                    <img class="img-fluid d-block mx-auto" src="img/portfolio/jump.PNG" alt="" style="height: 200px; width:300px;margin-bottom: 0px;">
+                    Stylized image
+                  </div>
+                  <div class="col-md-4"style="padding: 0px;" >
+                  <img class="img-fluid d-block " src="img/portfolio/jump.gif" alt="" style="height: 200px; width:300px;margin-bottom: 0px;">
+                  Animated video
+                  </div>
+                </div>
+
+                <br>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
-                  <li>Category: Illustration</li>
+                  <li>Date: March-May, 2019</li>
+                  <li>Course: Convolutional Neural Networks for visual recognition</li>
+                  <li>Project submission: <a href="https://drive.google.com/file/d/1v7oafIEOIIJWGMhKRRdrQNCux1EbXgOb/view?usp=sharing"> click here</a></li>
                 </ul>
+
+                <p>
+                  <h4 style="text-align: center;">What we did:</h4>
+                  Starting from a single image of a person, we created a 3 second animated video in which the main subject moves.
+                  This is similar to 'live photo' feature in iPhones.
+                  We trained our models on 100 'Cartwheel' videos from HMDB database.
+                  The model consists of a generative and style block. 
+                  GANs and convolutional LSTMs were used for generative block and 
+                  fast neural style transfer for stylization.
+                </p>
+
+                <p style="margin: 10px;">
+                  <h4  style="text-align: center;">Components:</h4>
+                  <div class="row">
+                    <div class="col-md-6" style="background-color:rgb(247, 241, 194);">
+                      <h6 style="text-align: center;padding: 10px; ">Generative block</h6>
+                      <ol>
+                        <li>Lidar</li>
+                        <li>RGB camera</li>
+                        <li>Jetson microcontroller</li>
+                        <li>ROS - Robot Operating System</li>
+                        <li>Rviz - for visualization</li>
+                        <li>Gazebo - for simulation</li>
+                      </ol>
+                    </div>
+                    <div class="col-md-6" style="background-color: rgb(247, 239, 178);">
+                      <h6 style="text-align: center;padding: 10px; ">Style block</h6>
+                      <h6 class="text-muted" style="font-size: 10px;">(implemented by each memeber of the team of 5)</h6>
+                      <ol>
+                        <li>EKF SLAM for initial mapping</li>
+                        <li>Mobilenet trained on COCO dataset to detect and classify food items from RGB images</li>
+                        <li>A-star algorithm for path planning</li>
+                        <li>Shortest path traversal using travelling salesman approach</li>
+                        <li>Differential flatness controller for long range and PI controller for short range motion</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <br>
+                </p>
+                
+
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -559,28 +652,68 @@
   </div>
 
   <!-- Modal 2 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="fooddelivery" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">Autonomous food delivery using turtlebot</h2>
+                <p class="item-intro text-muted">Robotic software development</p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/fooddelivery.png" alt="">
+
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Explore</li>
-                  <li>Category: Graphic Design</li>
+                  <li>Date: Jan-March 2019</li>
+                  <li>Course: Introduction to robotic autonomy</li>
+                  <li>Presentation:<a href="https://drive.google.com/file/d/1NcgZ7hk-2IjJdmJihwPlhOhtaBXmYfTK/view?usp=sharing"> click here</a></li>
                 </ul>
+
+                <h4 style="text-align: center;">What we did:</h4>
+                <div>
+                <h6 style="text-align: center;">Explore city</h6>
+                <ol>
+                <li>Navigate miniature city using turtlebot without colliding into obstacles.</li>
+                <li>Map city using EKF SLAM.</li>
+                <li>Record locations of different food items detected using mobilenet.</li>
+                </ol>
+                </div>
+                <div>
+                <h6 style="text-align: center;">Deliver food</h6>
+                <ol>
+                <li>Receive and process requests for delivery.</li>
+                <li>Autonomously drive through the city to pick up desired items and deliver them to the goal.</li>
+                </ol>
+
+
+                <p style="margin: 10px;">
+                  <h4  style="text-align: center;">Components:</h4>
+                  <div class="row">
+                    <div class="col-md-6" style="background-color:rgb(247, 241, 194);">
+                      <h6 style="text-align: center;padding: 10px; ">Hardware and software used</h6>
+                      <ol>
+                        <li>Lidar</li>
+                        <li>RGB camera</li>
+                        <li>Jetson microcontroller</li>
+                        <li>ROS - Robot Operating System</li>
+                        <li>Rviz - for visualization</li>
+                        <li>Gazebo - for simulation</li>
+                      </ol>
+                    </div>
+                    <div class="col-md-6" style="background-color: rgb(247, 239, 178);">
+                      <h6 style="text-align: center;padding: 10px; ">Software stack</h6>
+                      <h6 class="text-muted" style="font-size: 10px;">(implemented by each memeber of the team of 5)</h6>
+                      <ol>
+                        <li>EKF SLAM for initial mapping</li>
+                        <li>Mobilenet trained on COCO dataset to detect and classify food items from RGB images</li>
+                        <li>A-star algorithm for path planning</li>
+                        <li>Shortest path traversal using travelling salesman approach</li>
+                        <li>Differential flatness controller for long range and PI controller for short range motion</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <br>
+                  </p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
