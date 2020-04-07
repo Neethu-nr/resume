@@ -177,6 +177,7 @@
         </div>
       </div>
       <div class="row text-center">
+
         <button class="service-button col-md-4" onclick="openTab('aicc');" style="background:rgb(247, 241, 194);">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -258,21 +259,6 @@
       <div class="row">
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>AI for climate change</h4>
-            <p class="text-muted">Machine learning</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#gan">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -294,7 +280,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/turtlebot.png" alt="">
+            <img class="img-fluid" src="img/portfolio/turtlebot.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Autonomous delivery bot</h4>
@@ -303,36 +289,21 @@
         </div>
 
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+          <a class="portfolio-link" data-toggle="modal" href="#texting">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/texting.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Texting Application</h4>
-            <p class="text-muted">Networking</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Effectiveness of MOOC videos</h4>
-            <p class="text-muted">Machine learning</p>
+            <p class="text-muted">Software developement, Socket Programming</p>
           </div>
         </div>
         
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <!-- <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -345,9 +316,9 @@
             <h4>Cubesat</h4>
             <p class="text-muted">Software development</p>
           </div>
-        </div>
-      </div>
+        </div> -->
 
+      </div>
     </div>
   </section>
 
@@ -479,7 +450,8 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Contact Me</h2>
-          <h3 class="section-subheading text-muted">Would be happy to connect and discuss opportunites</h3>
+          <h3 class="section-subheading " style="color: white;">Would be happy to connect and discuss opportunites
+          <br> You could also email me at: <strong>neethur@stanford.edu</strong></h3>
         </div>
       </div>
       <div class="row">
@@ -559,20 +531,14 @@
   </footer>
 
   <!-- Portfolio Modals -->
-
-  <!-- Modal 1 -->
   <div class="portfolio-modal modal fade" id="gan" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
+
                 <!-- Project Details Go Here -->
 
                 <h2 class="text-uppercase">Video generation from single image</h2>
@@ -601,7 +567,7 @@
                 </ul>
 
                 <p>
-                  <h4 style="text-align: center;">What we did:</h4>
+                  <h4 style="text-align: center;">What is it?</h4>
                   Starting from a single image of a person, we created a 3 second animated video in which the main subject moves.
                   This is similar to 'live photo' feature in iPhones.
                   We trained our models on 100 'Cartwheel' videos from HMDB database.
@@ -610,39 +576,148 @@
                   fast neural style transfer for stylization.
                 </p>
 
-                <p style="margin: 10px;">
-                  <h4  style="text-align: center;">Components:</h4>
-                  <div class="row">
+                <h4  style="text-align: center;">Details:</h4>
+                  
+                <h6 style="padding: 10px;">Generative block:</h6>
+                <div class = "row">
+                  <button class="service-button col-md-4" onclick="openColTab('ganexp','containerColTab1');" style="background-color: rgb(247, 241, 194);width:50%;"  >
+                  <strong>Best GAN  </strong> 
+                  </button>
+                  <button class="service-button col-md-4" onclick="openColTab('lstm','containerColTab1');" style="background-color: rgb(247, 239, 178);width:50%">
+                  <strong>Generative Convolutional LSTM Model</strong> 
+                  </button>
+                </div>
+
+                <div id="ganexp" class="containerColTab1" style="display:none; background:rgb(247, 241, 194);" >
+                  <ul>
+                    <li>GANs have 2 neural networks - generator
+                    and discriminator. The generator takes input and generates sample output;
+                    the discriminator tries to differentiate the generated
+                    outputs from real data. Together they train each other.
+                    </li>
+                    <li>Generator architecture
+                    has 3D downsampling convolutions  with bachnorm followed by
+                    transpose 3d convolutions.</li> 
+                    <li>Discriminator consists of 3D convolutional layers with batchnorm
+                    and leakyReLU between them.</li>
+                    <li>The output of the
+                    generator is fed back into it 31 times to get the 32 frames
+                    of the video.</li>
+                  </ul>
+                </div>
+                
+                <div id="lstm" class="containerColTab1" style="display:none; background:rgb(247, 239, 178);">
+                  <ul>
+                    <li>Similar to the generator with an
+                      extra LSTM layer after the last downsampling.</li>
+                    <li>The final layer is a sigmoid is multiplied
+                      by 255 to get the image.</li>
+                    <li>The model is used as a next frame predictor. During training time takes in 32 images and outputs 32 images of the same size.
+                      During test time a single image is inputted and the output is fed back in to to get the next image.</li>
+                  </ul>
+                </div>
+
+                <h6 style="padding: 10px; ">Style block</h6>
+                <div class = "row">
+                    <button class="service-button col-md-4" onclick="openColTab('basicstyle','containerColTab2');" style="background-color: rgb(247, 241, 194);width:50%">
+                    <strong>Naive neural style transfer</strong> 
+                    </button>
+                    <button class="service-button col-md-4" onclick="openColTab('faststyle','containerColTab2');" style="background-color: rgb(247, 239, 178);width:50%">
+                    <strong>Fast implementation</strong>
+                    </button>
+                </div>
+
+                <div id="basicstyle" class="containerColTab2" style="display:none; background:rgb(247, 241, 194);">
+                <ul>
+                  <li>Takes two images — content and style image — and blends them together so the output image looks like the content image,
+                  but “painted” in the style of the style image.</li>
+                  <li>Takes around half an hour to generate a stylized image for a content image.</li>
+                </ul>
+                </div>
+                    
+                <div id="faststyle" class="containerColTab2" style="display:none; background:rgb(247, 239, 178)">
+                  <ul>
+                    <li>Uses perceptual loss functions for training transfer network.</li>
+                    <li>I used vgg-16 model to train transfer network.</li>
+                    <li>Instance normalization was replaced with conditional
+                    instance normalization to train the transfer network
+                    with multiple styles at the same time, instead of training
+                    different networks for each style. </li>
+                    <li>Training takes a couple of hours and <strong>stylized image generation takes seconds</strong>.</li>
+                  </ul>
+                </div>
+                  <!-- <div class="row">
                     <div class="col-md-6" style="background-color:rgb(247, 241, 194);">
-                      <h6 style="text-align: center;padding: 10px; ">Generative block</h6>
-                      <ol>
-                        <li>Lidar</li>
-                        <li>RGB camera</li>
-                        <li>Jetson microcontroller</li>
-                        <li>ROS - Robot Operating System</li>
-                        <li>Rviz - for visualization</li>
-                        <li>Gazebo - for simulation</li>
-                      </ol>
+                      <h6 style="text-align: center;padding: 10px;">Generative block:</h6>
+                      GANs have 2 neural networks - generator
+                      and discriminator. The generator takes input and generates sample output;
+                      the discriminator tries to differentiate the generated
+                      outputs from real data. Together they train each other.
+                      <div class = "row">
+                        <button class="btn btn-primary" onclick="openColTab('ganexp','containerColTab1');" style="width: 50%;" >
+                        <strong>Best GAN  </strong> 
+                        </button>
+                        <button class="btn btn-primary" onclick="openColTab('lstm','containerColTab1');" style="width: 50%;" >
+                          <strong>Generative Convolutional LSTM Model : </strong> 
+                        </button>
+                      </div>
+                      <div id="ganexp" class="containerColTab1" style="display:none; background:rgb(254, 209, 54)" >
+                        <ul>
+                        <li>Generator architecture
+                        has 3D downsampling convolutions  with bachnorm followed by
+                        transpose 3d convolutions.</li> 
+                        <li>Discriminator consists of 3D convolutional layers with batchnorm
+                        and leakyReLU between them.</li>
+                        <li>The output of the
+                          generator is fed back into it 31 times to get the 32 frames
+                          of the video.</li>
+                        </ul>
+                      </div>
+                    <div id="lstm" class="containerColTab1" style="display:none; background:rgb(254, 209, 54)">
+                      <ul>
+                        <li>Similar to the generator with an
+                          extra LSTM layer after the last downsampling.</li>
+                        <li>The final layer is a sigmoid is multiplied
+                          by 255 to get the image.</li>
+                        <li>The model is used as a next frame predictor. During training time takes in 32 images and outputs 32 images of the same size.
+                          During test time a single image is inputted and the output is fed back in to to get the next image.</li>
+                      </ul>
                     </div>
+                    </div>
+
                     <div class="col-md-6" style="background-color: rgb(247, 239, 178);">
                       <h6 style="text-align: center;padding: 10px; ">Style block</h6>
-                      <h6 class="text-muted" style="font-size: 10px;">(implemented by each memeber of the team of 5)</h6>
-                      <ol>
-                        <li>EKF SLAM for initial mapping</li>
-                        <li>Mobilenet trained on COCO dataset to detect and classify food items from RGB images</li>
-                        <li>A-star algorithm for path planning</li>
-                        <li>Shortest path traversal using travelling salesman approach</li>
-                        <li>Differential flatness controller for long range and PI controller for short range motion</li>
-                      </ol>
-                    </div>
-                  </div>
-                  <br>
-                </p>
-                
+                      <strong>Neural style transfer : </strong>
+                      <br>
+                      Takes two images — content and style image — and blends them together so the output image looks like the content image,
+                      but “painted” in the style of the style image.
+                      <div class = "row">
+                        <button class="btn btn-primary" onclick="openColTab('basicstyle','containerColTab2');" style="width: 50%;" >
+                        <strong>basic implementation : </strong> 
+                        </button>
+                        <button class="btn btn-primary" onclick="openColTab('faststyle','containerColTab2');" style="width: 50%;" >
+                        <strong>Fast implementation :</strong>
+                        </button>
+                      </div>
+                        <div id="basicstyle" class="containerColTab2" style="display:none; background:rgb(254, 209, 54)">
+                          <ul>
+                          <li>Takes around half an hour to generate a stylized image for a content image.</li>
+                          </ul>
+                        </div>
+                        <div id="faststyle" class="containerColTab2" style="display:none; background:rgb(254, 209, 54)">
+                          <ul>
+                          <li>Training of </li>
+                          <li>Uses perceptual loss functions
+                            for training feed-forward networks</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div> -->
 
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
+                    <p><br></p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
               </div>
             </div>
           </div>
@@ -650,7 +725,6 @@
       </div>
     </div>
   </div>
-
   <!-- Modal 2 -->
   <div class="portfolio-modal modal fade" id="fooddelivery" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -669,22 +743,22 @@
                   <li>Presentation:<a href="https://drive.google.com/file/d/1NcgZ7hk-2IjJdmJihwPlhOhtaBXmYfTK/view?usp=sharing"> click here</a></li>
                 </ul>
 
-                <h4 style="text-align: center;">What we did:</h4>
+                <h4 style="text-align: center;">What is it?</h4>
                 <div>
-                <h6 style="text-align: center;">Explore city</h6>
-                <ol>
-                <li>Navigate miniature city using turtlebot without colliding into obstacles.</li>
-                <li>Map city using EKF SLAM.</li>
-                <li>Record locations of different food items detected using mobilenet.</li>
-                </ol>
+                  <h6 style="text-align: center;">Explore city</h6>
+                  <ol>
+                  <li>Navigate miniature city using turtlebot without colliding into obstacles.</li>
+                  <li>Map city using EKF SLAM.</li>
+                  <li>Record locations of different food items detected using mobilenet.</li>
+                  </ol>
                 </div>
                 <div>
-                <h6 style="text-align: center;">Deliver food</h6>
-                <ol>
-                <li>Receive and process requests for delivery.</li>
-                <li>Autonomously drive through the city to pick up desired items and deliver them to the goal.</li>
-                </ol>
-
+                  <h6 style="text-align: center;">Deliver food</h6>
+                  <ol>
+                  <li>Receive and process requests for delivery.</li>
+                  <li>Autonomously drive through the city to pick up desired items and deliver them to the goal.</li>
+                  </ol>
+                </div>
 
                 <p style="margin: 10px;">
                   <h4  style="text-align: center;">Components:</h4>
@@ -713,10 +787,11 @@
                     </div>
                   </div>
                   <br>
-                  </p>
+                </p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Project</button>
+                  Close Project
+                </button>
               </div>
             </div>
           </div>
@@ -725,8 +800,9 @@
     </div>
   </div>
 
+  
   <!-- Modal 3 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="texting" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -738,16 +814,45 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h2 class="text-uppercase">Mini texting application</h2>
+                <p class="item-intro text-muted">Software developement, Socket Programming </p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/texting.gif" alt="" style="height: 300px; width:500px;margin-bottom: 0px;">
+                  <figcaption style="text-align: center;">Sample run. left-server, right-clients<br></figcaption>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
+                  <li>Date: Sept-Dec, 2019</li>
+                  <li>Course: Programming Abstractions (Accelerated C++)</li>
+                  <li>Presentation:<a href="https://drive.google.com/file/d/1duI1F-Io2vHz5zpbpdtx4vuNl8aaAq91/view?usp=sharing"> click here</a></li>
                 </ul>
+                <h4 style="text-align: center;">What is it?</h4>
+                <ul>
+                <li>I had no prior experience in networking, and wanted to explore a bit.</li>
+                <li>I made a TCP client-server application for
+                windows OS using standard C++ libraries to efficiently handle text messaging.</li>
+                <li>One server could handle up to 100 clients simulatneously. </li>
+                <li>It could process asynchronous inputs from clients including accepting new connection, messages, change in individual client staus.</li>
+                Client server included functionalities like creating and logging into accounts, switching chat partner, adding new friends, etc.
+              </ul>
+                <h4 style="text-align: center;">Details:</h4>
+                <div class="row">
+                <div class="col-md-6" style="background-color: rgb(247, 241, 194);">
+                  <h6 style="text-align: center;padding: 10px; ">Server</h6>
+                  <ol>
+                  <li>Socket programming using Winsock library to establish new client connections.</li>
+                  <li>User data bound to independednt objects for unique identification.</li>
+                  <li>Input texts stored if user offline.</li>
+                  <li>All communications made non-blocking.</li>
+                  </ol>
+                </div>
+                <div class="col-md-6" style="background-color: rgb(247, 239, 178);">
+                  <h6 style="text-align: center;padding: 10px; ">Client</h6>
+                  <ol>
+                  <li>User inputs and server communication made non-blocking using futures.</li>
+                  <li>Command table approach to handle special commands like help.</li>
+                  <li>Error handling and file compression of previous chats using lzw compression.</li>
+                  </ol>
+                </div>
+                </div>
+                <p><br></p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
                   Close Project</button>
@@ -759,7 +864,7 @@
     </div>
   </div>
 
-  <!-- Modal 4 -->
+  <!-- Modal 4
   <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -772,7 +877,6 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
-                <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
@@ -791,75 +895,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <!-- Modal 5 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Southwest</li>
-                  <li>Category: Website Design</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 6 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Window</li>
-                  <li>Category: Photography</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
